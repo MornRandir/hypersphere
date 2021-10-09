@@ -126,7 +126,7 @@ color: #F50537;
 background-color: #F50537;
 }
 .color-audi-grey{
-color:  #b3b3b3;
+background-color: #cccccc  ;
 }
 /* Glitch Logo*/
 /* Our mixin positions a copy of our text
@@ -603,13 +603,13 @@ video::-webkit-media-controls {
   padding: 10px 30px;
   border: 2px solid #F50537;
   color: white;
-  background: rgba(0, 0, 0, 0.42);
+  background: #b3b3b3;
   text-decoration: none;
   font-size: 1.125em;
-  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   -webkit-font-smoothing: antialiased;
+  width: 300px;
 
 }
 .btn-cont .btn:hover {
@@ -926,6 +926,13 @@ body.modal-open #fullpage{
 }
 
 #section7{
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
+}
+
+#section8{
   background: #F50537;
   }
 
@@ -950,6 +957,13 @@ body.modal-open #fullpage{
 
 }
 .section:nth-child(5) {
+
+}
+
+.section:nth-child(6) {
+
+}
+.section:nth-child(7) {
 
 }
 .section:last-child {
