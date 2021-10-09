@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HYPERSPHERE</title>
+<!--favicon-->
+
+<link color="rgb(105, 0, 255)" rel="mask-icon" href="img/favicon/safari_pinned_tab.svg">
+
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="js/manifest.json">
+<meta name="msapplication-TileColor" content="rgb(105, 0, 255)">
+<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="rgb(105, 0, 255)">
+<meta name="application-name" content="NORMAL|СТУДИЯ">
+<meta name="msapplication-config" content="xml/browserconfig.xml">
+
+
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+  <!-- Стили анимаций -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- Подключение jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Bootstrap стили-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- MDB core JavaScript -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- CSS файл плагина fullpage -->
+  <link href="libs/fullpage/fullpage.css" type="text/css" rel="stylesheet">
+
+  <!-- Основные стили -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Стили формы обратной связи -->
+  <link href="css/FormStyle.css" rel="stylesheet">
+
+  <!-- Анимация гамбургера и оверлей меню-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.first-button').on('click', function() {
+        // console.log('debug');
+        $('.animated-icon1').toggleClass('open');
+        $('.navbar').toggleClass('menuBG');
+        $('.section').toggleClass('secOverlay');
+
+      });
+      $(".nav-link").on("click", function() {
+        var elem = $("#navbarSupportedContent20");
+
+        if (elem.hasClass('show')) {
+          elem.toggleClass('show');
+          $('.animated-icon1').toggleClass('open');
+                  $('.navbar').toggleClass('menuBG');
+                  $('.section').toggleClass('secOverlay');
+        }
+      });
+    });
+  </script>
+
+  <!-- Анимация картинок modals -->
+  <script type="text/javascript">
+    $('.carousel').carousel({
+      interval: 2000
+    })
+  </script>
+
+  <!--Скрипт кнопки наверх-->
+  <script type="text/javascript">
+    /*
+    ICON AUTO PLAYS
+    HOVER OVER ICON
+    TO MAKE IT INTERACTIVE
+  */
+    upInteractive = false;
+    function autoToggle() {
+      $('.arrow').toggleClass('auto');
+    }
+    $('.arrow').hover(function() {
+      upInteractive = true;
+      $('.arrow').removeClass('auto');
+    });
+    setInterval(function() {
+      console.log(upInteractive);
+      if (upInteractive === false) {
+        autoToggle();
+      }
+    }, 2000);
+  </script>
+
+<!--Удаление якорей из url-->
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+
+
+
+  font-family: "AudiTypeVar", Verdana, sans-serif;
+  font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
+  -webkit-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
+  -moz-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
+  -ms-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
+  -o-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
+
+
+
+  <!-- Меню-->
+  <nav class="navbar  fixed-top navbar-expand-md navbar-dark lighten-4 mb-4 scrolling-navbar">
+
+    <a class="navbar-brand" href="#main">
+      <h3 class="logoNormal my-auto d-md-none">NRML</h3>
+    </a>
+
+    <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon1"><span></span><span></span><span></span></div>
+    </button>
+
+
+
+
+    <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap" id="navbarSupportedContent20">
+      <div class="logoNormal my-auto d-none d-md-block">
+        <a href="#main">
+          NORMAL | СТУДИЯ
+        </a>
+      </div>
+
+      <ul id="menu" class="navbar-nav ">
+        <li class="nav-item" data-menuanchor="main"><a class="nav-link" href="#main">Нормости</a></li>
+        <li class="nav-item" data-menuanchor="about"><a class="nav-link" href="#about">О нормас</a></li>
+        <li class="nav-item" data-menuanchor="team"><a class="nav-link" href="#team">Команда</a></li>
+        <li class="nav-item" data-menuanchor="customer"><a class="nav-link" href="#customer">Услуги</a></li>
+        <li class="nav-item" data-menuanchor="contacts"><a class="nav-link" href="#contacts">#норм_контакт</a></li>
+        <li class="nav-item" data-menuanchor="portfolio"><a class="nav-link" href="doing.html">Портфоль</a></li>
+      </ul>
+      <div class="">
+        <ul class="list-unstyled d-flex fa-lg white-text mb-0">
+          <li>
+            <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+
+
+  <!-- Кнопка наверх -->
+  <div class="row justify-content-end m-5 fixed-bottom">
+    <a href="#main" id="buttonUp">
+      <img class="buttonUp d-none d-lg-block" src="img/buttonUp.png"></i>
+    </a>
+  </div>
+
+
+  <!--Основные секции страницы -->
+  <div id="fullpage">
+    <section class="section first" id="section0" data-anchor="main">
+      <div class="overlay"></div>
+      <video id="introVideo" loop muted autoplay>
+        <source src="vids/Intro.mp4" type="video/mp4">
+      </video>
+      <div class="layer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 is-animated__single h4-responsive">
+              <p class="logoNormal glitch text-nowrap h1-responsive" data-text="NORMAL | СТУДИЯ">NORMAL | СТУДИЯ</p>
+               Меняем будущее с помощью технологий.
+
+<button class="aui-button aui-button--primary aui-js-response" type="button">Primary Button</button><button class="aui-button aui-button--secondary aui-js-response" type="button">Secondary Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Кнопка вниз на следующий слайд -->
+      <a class="d-flex justify-content-center" href="#about">
+        <div class="arrow1  is-animated">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section second" id="section1" data-anchor="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class=" my-5 py-5">
+              <section class=" text-center text-lg-left">
+                <div class="text-center mb-5 is-animated__single">
+                <h3 class="font-weight-bold text-center mb-4">Кто мы?</h3>
+                </div>
+                <div class="row text-center justify-content-around">
+                  <div class="col-md-8 mb-4 is-animated">
+                    <h6>
+                      <p>Безграничность фантазии человека и непрерывно развивающиеся технологии. <br /><br />
+                        Это то &mdash; что у нас есть. <br>И это то &mdash; что сделает ваши решения безупречными.</p>
+                    </h6>
+                    <div class='btn-cont'>
+                      <a class='btn' href='#contacts'>
+                        Написать <i class="far fa-envelope"></i>
+                        <span class='line-1'></span>
+                        <span class='line-2'></span>
+                        <span class='line-3'></span>
+                        <span class='line-4'></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+<br><br><br>
+                <div class="row justify-content-between">
+                  <img class="is-animated pngabout d-none" src="img/about/loyalty.png" alt="loyalty">
+                  <img class="is-animated pngabout d-none" src="img/about/creativity.png" alt="creativity">
+                  <img class="is-animated pngabout d-none" src="img/about/brain.png" alt="brain">
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section third" id="section2" data-anchor="team">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-8  ">
+          <div class=" my-5 p-5 ">
+            <section class="container team-section">
+              <div class=" is-animated__single">
+                <h3 class="text-center font-weight-bold mb-4">Наша команда</h3>
+                <h6 class="text-center">
+                  Мы творческое объединение, состоящее из различных специалистов, способных решить огромное количество задач,
+                  стоящих сегодня перед реализацией вашего продукта.<br><br><br><br><br>
+                </h6>
+              </div>
+
+              <div class="row justify-content-around">
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/yan.jpg" class="z-depth-1 rounded-circle img-fluid" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Ян Герц</h6>
+                  <small class="leadsWork">Game Designer</small>
+                  <p class="mt-3 mb-4 d-none">Воссоздаст любой &mdash; даже самый фантастический мир в реальности.</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0  red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://vk.com/bunfar"><i class="fab fa-vk red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.behance.net/bunfar"><i class="fab fa-behance-square red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.artstation.com/ibunfar"><i class="fab fa-artstation red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/serj.jpg" class="z-depth-1 rounded-circle img-fluid mx-auto" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Сергей Турищев</h6>
+                  <small class="leadsWork">3d Concept Artist</small>
+                  <p class="mt-3 mb-4 d-none">Доведет концепт от скетча до реализации.</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://vk.com/trirad"><i class="fab fa-vk red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.facebook.com/TRIRAD13"><i class="fab fa-facebook-f red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/trirad13"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.artstation.com/trirad"><i class="fab fa-artstation red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/grinch.jpg" class="z-depth-1 rounded-circle img-fluid mx-auto" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Григорий Чижевский</h6>
+                  <small class="leadsWork">3d Animator</small>
+                  <p class="mt-3 mb-4 d-none">Оживит любой дизайн. Заставит все работать.</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://vk.com/g_u_c"><i class="fab fa-vk red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/cg_gregory/"><i class="fab fa-facebook-f red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/cg_gregory/"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/cg_gregory/"><i class="fab fa-linkedin-in red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/kir.jpg" class="z-depth-1 rounded-circle img-fluid" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Кирилл Макаренко</h6>
+                  <small class="leadsWork">3d Artist, ArchiViz</small>
+                  <p class="mt-3 mb-4 d-none">Создаст реалистичный 3д концепт любого сооружения.</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://vk.com/kir_makar"><i class="fab fa-vk red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.behance.net/kir_makar"><i class="fab fa-behance-square red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://instagram.com/kir_makar"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.kirmakar.com"><i class="fas fa-globe red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/tom.jpg" class="z-depth-1 rounded-circle img-fluid" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Анатолий Трошин</h6>
+                  <small class="leadsWork">3d Artist, IT specialist</small>
+                  <p class="mt-3 mb-4 d-none">Обеспечит надежное выполнение всех рабочих процессов.</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-twitter red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-facebook-f red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-linkedin-in red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+                <div class="fellowsheight col-md-4 mb-4 is-animated d-flex flex-column justify-content-between">
+                  <div class="fellows mx-auto mb-4">
+                    <img src="img/fellows/den.jpg" class="z-depth-1 rounded-circle img-fluid" alt="smaple image">
+                  </div>
+                  <h6 class="font-weight-bold">Денис Жданов</h6>
+                  <small class="leadsWork">UE Developer</small>
+                  <p class="mt-3 mb-4 d-none">Чем он занимается? И мы не знаем. Нам страшно у него спрашивать. Вы его взгляд видели?</p>
+                  <ul class="list-unstyled d-flex justify-content-center mt-3 mb-0 red-text leadsSocial">
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-twitter red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-facebook-f red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-instagram red-text mx-2"></i></a></li>
+                    <li><a target="_blank" role="button" href="https://www.instagram.com/ibunfar"><i class="fab fa-linkedin-in red-text mx-2"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fourth" id="section3" data-anchor="customer">
+      <div class="container my-5">
+          <div class="text-center px-md-5 white-text py-4 is-animated__single">
+            <h4 class="font-weight-bold mb-4">Чем мы занимаемся?</h4>
+            <h6 class="text-center">Нашими основными направлениями являются: разработка дизайна продуктов и транспорта, геймдизайн, AR/VR, создание приложений, реалистичная визуализация, анимации и видео.</h6>
+          </br class="d-md-none">
+            <h6 class="text-center d-md-none">Вы можете ознакомиться с нашими проектами. с:</h6>
+          </br>
+            <div class="row d-flex justify-content-center">
+              <div class='btn-cont mx-5'>
+                <a class='btn' href='doing.html'>
+                  Проекты <i class="fas fa-briefcase"></i>
+                  <span class='line-1'></span>
+                  <span class='line-2'></span>
+                  <span class='line-3'></span>
+                  <span class='line-4'></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content mb-5">
+            <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12 col-lg-4">
+                  <a class="#bf360c deep-orange darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Dev">
+                    <img class="card-img-top" src="./img/modals/dev/dev.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                      Геймдизайн
+                    </div>
+                  </a>
+                  <a class="#1c2a48 mdb-color darken-3 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Model">
+                    <img class="card-img-top" src="./img/modals/3dgame/3dGame.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                      3D Моделлирование
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <a class="#880e4f pink darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Vid">
+                    <img class="card-img-top" src="./img/modals/vid/vid.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                      Анимация и видео
+                    </div>
+                  </a>
+                  <a class="#64b5f6 blue lighten-2 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Product">
+                    <img class="card-img-top " src="./img/modals/prod/prod.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                      Промышленный дизайн
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <a class="#4a148c purple darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Graf">
+                    <img class="card-img-top" src="./img/modals/graf/graf.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                    Графический дизайн
+                    </div>
+                  </a>
+                  <a class="#59698d mdb-color lighten-1 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Stand">
+                    <img class="card-img-top" src="./img/modals/stand/stand.jpg" alt="Card image cap">
+                    <div class="card-body text-nowrap">
+                      Выставочные стенды
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="section fifth" id="section4" data-anchor="contacts">
+      <div class="container is-animated my-5">
+        <h1>Напишите нам</h1>
+
+        <div class="form__wrapper">
+          <!-- Форма обратной связи -->
+          <form id="feedback-form" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
+            <!-- Имя пользователя -->
+            <div class="form-group">
+              <label for="name" class="control-label">Как к вам обращаться?</label>
+              <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
+                maxlength="30" required="required">
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-row">
+              <!-- Телефон пользователя -->
+              <div class="form-group">
+                <label for="phone" class="control-label">Телефон</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">+7</div>
+                  </div>
+                  <input id="phone" type="tel" name="phone" class="form-control" value="(___)___-__-__" pattern="^\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$">
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              <!-- Email пользователя -->
+              <div class="form-group">
+                <label for="email" class="control-label">Email-адрес</label>
+                <input id="email" type="email" name="email" required="required" class="form-control" value=""
+                  placeholder="Email-адрес">
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+
+            <!-- Сообщение пользователя -->
+            <div class="form-group">
+              <label for="message" class="control-label">Свяжитесь с нами, опишите ваши идеи, прикрепите ссылку на облако с проектом.</label>
+              <textarea id="message" name="message" class="form-control" rows="3"
+                placeholder="Сообщение (не менее 20 символов)." minlength="20" maxlength="500"
+                required="required"></textarea>
+              <div class="invalid-feedback"></div>
+            </div>
+
+
+
+
+
+            <!-- Пользовательское солашение -->
+            <div class="form-group form-agreement">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
+                <label class="custom-control-label" for="customCheck">Нажимая кнопку, я принимаю условия <a
+                    href="#">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных.</label>
+              </div>
+            </div>
+
+            <!-- Сообщение при ошибке -->
+            <div class="form-error d-none">
+              Исправьте данные и отправьте форму ещё раз.
+            </div>
+
+            <!-- Индикация отправки данных формы на сервер -->
+            <div class="progress d-none">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                style="width: 0"></div>
+            </div>
+
+            <!-- Кнопка для отправки формы на сервер -->
+            <div class="form-submit">
+              <button type="submit" disabled>Отправить сообщение</button>
+            </div>
+
+          </form>
+
+          <!-- Сообщение об успешной отправки формы -->
+          <div class="form-result-success d-none">
+            <div>Форма успешно отправлена. Нажмите на <a href="#" data-target="#feedback-form">ссылку</a>, чтобы отправить
+              ещё одно сообщение.</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Маска формы телефона-->
+      <script src="js/masked_input_1.4.1.js" type="text/javascript"></script>
+      <script>
+        // masked_input_1.4.1-min.js
+        // angelwatt.com/coding/masked_input.php
+        MaskedInput({
+          elm: document.getElementById('phone'), // select by id
+          format: '(___)___-__-__',
+          separator: '()-'
+        });
+      </script>
+      <script src="/feedback/js/process-forms.js"></script>
+      <script>
+          (new ProcessForm()).init();
+        /*
+        Параметры указываются в виде:
+        {
+        ключ: значение;
+        ключ: значение;
+        ...
+        }
+        Основные параметры
+        selector - селектор формы (по умолчанию '#feedback-form')
+        attachmentsMaxFileSize - максимальный размер файла в Кбайтах (по умолчанию 512)
+        attachmentsFileExt - допустимые расширения файлов для загрузки (по умолчанию 'jpg','jpeg','bmp','gif','png')
+        isUseDefaultSuccessMessage - отображать дефолтное сообщение после отправки
+        */
+
+      </script>
+    </section>
+
+
+<section class="section sixth fp-auto-height" id="section6" data-anchor="footer">
+  <footer class="page-footer font-small py-4">
+    <div class="container">
+      <div class="d-flex">
+        <div class="col-md-6 d-flex justify-content-start">
+          <div class="footer-copyright text-center  bg-transparent">
+            <div class="d-flex">
+              <div class="col-md-6 d-none d-md-block text-nowrap">
+              <i class="far fa-smile-beam fa-spin "></i>2021 Copyright:
+              </div>
+              <div class="col-md-6">
+                  <a href="http://www.nrml.tech">www.nrml.tech</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+          <ul class="list-unstyled d-flex mb-0">
+            <li>
+              <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+</div>
+
+  <!-- Modals для услуг НЕ БУДЕТ РАБОТАТЬ ЕСЛИ ПОМЕСТИТЬ В fullpage -->
+  <div class="modal fade" id="Dev" tabindex="-1" role="dialog" aria-labelledby="Dev" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">Геймдизайн</h5>
+              <p>Создание дизайна локаций и геймплейных механик. Работаем как над визуальной, так и над технической составляющей. Опыт в создании AR/VR окружения.</p>
+              <br><br>
+              <p><i class="fas fa-dot-circle green-text"></i> Современные решения</p>
+              <br>
+              <p><i class="fas fa-dot-circle green-text"></i> Нарративность</p>
+              <br>
+              <p><i class="fas fa-dot-circle green-text"></i> Обширный опыт</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-dev" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-dev" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-dev" data-slide-to="1"></li>
+                  <li data-target="#carousel-dev" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/dev/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/dev/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/dev/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-dev" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-dev" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Model" tabindex="-1" role="dialog" aria-labelledby="Model" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="  col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">3D Моделлирование</h5>
+              <p>У нас обширный опыт работы в геймдев индустрии, наши специалисты могут создать модели под любые ваши нужды.
+                <br>
+                <p>Мы готовы взять на себя полный цикл разработки:
+                  от концепции на листе, скетчей и стайлбордов до полного ассета интегрированного в вашу среду разработки. Или взять ваши модели и эскизы на доработку.
+                </p>
+                <br><br>
+                <p><i class="fas fa-dot-circle green-text"></i> Подстроимся под ваш пайплайн</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Быстро реагируем на изменения</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Используем самые передовые технологии</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-game" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-game" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-game" data-slide-to="1"></li>
+                  <li data-target="#carousel-game" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/3dgame/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/3dgame/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/3dgame/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-game" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-game" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Product" tabindex="-1" role="dialog" aria-labelledby="Product" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">Промышленный дизайн</h5>
+              <p>Создаем дизайн продуктов с нуля. От идеи к скетчу. От скетча до детальной визуализации.
+                <br>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Современность</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Функциональность</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Инновативные решения</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-prod" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-prod" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-prod" data-slide-to="1"></li>
+                  <li data-target="#carousel-prod" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/prod/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/prod/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/prod/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-prod" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-prod" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Vid" tabindex="-1" role="dialog" aria-labelledby="Vid" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">Анимация и эффекты</h5>
+              <p>Совместно с дизайнерами и режиссерами создадим качественную анимированную визуализацию вашего продукта, рекламу или видеоклип.
+                <br>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Профессионализм</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Скорость работы</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Реалистичная графика</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-vid" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-vid" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-vid" data-slide-to="1"></li>
+                  <li data-target="#carousel-vid" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/3dgame/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/3dgame/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/3dgame/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-vid" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-vid" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Graf" tabindex="-1" role="dialog" aria-labelledby="Graf" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">Графический дизайн</h5>
+              <p>Современные решения коммуникативного дизайна для ваших проектов.
+                <br>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Яркий дизайн</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Макеты в любом формате</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Индивидуальный подход</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-graf" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-graf" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-graf" data-slide-to="1"></li>
+                  <li data-target="#carousel-graf" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/graf/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/graf/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/graf/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-graf" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-graf" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Stand" tabindex="-1" role="dialog" aria-labelledby="Stand" aria-hidden="true">
+    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="modalinfo row">
+            <div class="col-md-6 py-5 pl-5">
+              <h5 class="font-weight-bold mb-3">Выставочные стенды</h5>
+              <p>Наши специалисты создают успешные проекты под выставки разного масштаба. Качественная презентация вашего бренда. Понимание технологий производства.
+                <br>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Быстрые решения</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Понимание технологий производства</p>
+                <br>
+                <p><i class="fas fa-dot-circle green-text"></i> Качественная визуализация</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carousel-stand" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-stand" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-stand" data-slide-to="1"></li>
+                  <li data-target="#carousel-stand" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/modals/stand/1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/stand/2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/modals/stand/3.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-stand" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-stand" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Подключение fulpage для прокрутки по секциям -->
+  <script src="libs/fullpage/easings.min.js"></script>
+  <script src="libs/fullpage/scrolloverflow.min.js"></script>
+  <script src="libs/fullpage/fullpage.js"></script>
+
+  <!-- Инициализация плагина fullpage и анимации Animate css-->
+  <script type="text/javascript">
+    (function($) {
+
+      'use strict';
+      // variables
+      var $isAnimatedFirst = $('.first .is-animated'),
+        $isAnimatedFirstSingle = $('.first .is-animated__single'),
+        $isAnimatedSecond = $('.second .is-animated'),
+        $isAnimatedSecondSingle = $('.second .is-animated__single'),
+        $isAnimatedThird = $('.third .is-animated'),
+        $isAnimatedThirdSingle = $('.third .is-animated__single'),
+        $isAnimatedFourth = $('.fourth .is-animated'),
+        $isAnimatedFourthSingle = $('.fourth .is-animated__single'),
+        $isAnimatedFifth = $('.fifth .is-animated'),
+        $isAnimatedFifthSingle = $('.fifth .is-animated__single');
+
+      // initialize fullPage
+      $('#fullpage').fullpage({
+        responsiveWidth: 768,
+        autoScrolling: true,
+        scrollHorizontally: false,
+        licenseKey: '8C06A6A2-33CB47EF-86BCD8DB-2CDB1201',
+        anchors: ['main', 'about', 'team', 'customer', 'contacts', 'footer'],
+        navigation: false,
+        navigationTooltips: ['Нормости', 'Кто Я?', 'Крутые', 'Я могу', 'Напиши'],
+        showActiveTooltip: true,
+        menu: '#menu',
+
+        afterRender: function() {
+          $isAnimatedFirstSingle.addClass('animated fadeIn').css('animation-delay', '.4s');
+          $isAnimatedFirst.eq(0).addClass('animated fadeIn').css('animation-delay', '1.2s');
+          $('#buttonUp').hide();
+        },
+        onLeave: function(origin, destination, direction) {
+          var leavingSection = this;
+          if (screen.width >= 768) {
+
+
+          //после покидания секции 1
+          if (origin.index == 0 && direction == 'down') {
+            $isAnimatedSecondSingle.addClass('animated fadeIn').css('animation-delay', '.2s');
+            $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '.6s');
+            $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '1s');
+            $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
+            $isAnimatedSecond.eq(3).addClass('animated fadeIn').css('animation-delay', '1.4s');
+            $('#buttonUp').show().addClass('animated fadeIn').css('animation-delay', '.6s');
+
+          } else if (destination.index == 0) {
+            $('#buttonUp').hide();
+          }
+          //после покидания секции 2
+          else if (origin.index == 1 && direction == 'down') {
+            $isAnimatedThirdSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
+            $isAnimatedThird.eq(0).addClass('animated fadeIn').css('animation-delay', '.4s');
+            $isAnimatedThird.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
+            $isAnimatedThird.eq(2).addClass('animated fadeIn').css('animation-delay', '.6s');
+            $isAnimatedThird.eq(3).addClass('animated fadeIn').css('animation-delay', '.7s');
+            $isAnimatedThird.eq(4).addClass('animated fadeIn').css('animation-delay', '.8s');
+            $isAnimatedThird.eq(5).addClass('animated fadeIn').css('animation-delay', '.9s');
+          }
+
+          //после покидания секции 3
+          else if (origin.index == 2 && direction == 'down') {
+            $isAnimatedFourthSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
+            $isAnimatedFourth.eq(0).addClass('animated fadeIn').css('animation-delay', '.8s');
+            $isAnimatedFourth.eq(1).addClass('animated fadeIn').css('animation-delay', '.9s');
+            $isAnimatedFourth.eq(2).addClass('animated fadeIn').css('animation-delay', '1.0s');
+            $isAnimatedFourth.eq(3).addClass('animated fadeIn').css('animation-delay', '1.1s');
+            $isAnimatedFourth.eq(4).addClass('animated fadeIn').css('animation-delay', '1.2s');
+            $isAnimatedFourth.eq(5).addClass('animated fadeIn').css('animation-delay', '1.3s');
+          }
+          //после покидания секции 4
+          else if (origin.index == 3 && direction == 'down') {
+            $isAnimatedFifth.addClass('animated fadeInUp');
+            $isAnimatedFifth.eq(0).css('animation-delay', '.3s');
+          }}
+        }
+      });
+    })(jQuery);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>NRML Std.</title>
+
+      <!-- Font Awesome -->
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Google Fonts -->
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+      <!-- Material Design Bootstrap -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+      <!-- Стили анимаций -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+      <!-- Подключение jquery -->
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <!-- Bootstrap -->
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <!-- Bootstrap стили-->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <!-- Основные стили -->
+          <link href="css/portfolio.css" rel="stylesheet">
+      <!-- MDB core JavaScript -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+  	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+<!-- Сортировка -->
+<script type="text/javascript">
+$(function () {
+  var selectedClass = "";
+  $(".filter").click(function () {
+    selectedClass = $(this).attr("data-rel");
+    $("#gallery").fadeTo(100, 0.1);
+    $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+    setTimeout(function () {
+      $("." + selectedClass).fadeIn().addClass('animation');
+      $("#gallery").fadeTo(300, 1);
+    }, 300);
+  });
+});
+
+</script>
+
+
+      <!-- Видео -->
+<script type="text/javascript">
+  $('#play').on('click', function (e) {
+  e.preventDefault();
+  $("#player")[0].src += "?autoplay=1";
+  $('#player').show();
+  $('#video-cover').hide();
+})
+$('#modal1').on('hidden.bs.modal', function (e) {
+  $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
+});
+
+</script>
+<!-- хуй знает -->
+  <script type="text/javascript">
+    $(function () {
+      var selectedClass = "";
+      $(".filter").click(function () {
+        selectedClass = $(this).attr("data-rel");
+        $("#gallery").fadeTo(100, 0.1);
+        $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+        setTimeout(function () {
+          $("." + selectedClass).fadeIn().addClass('animation');
+          $("#gallery").fadeTo(300, 1);
+        }, 300);
+      });
+    });
+  </script>
+
+
+<!-- Анимации -->
+<script type="text/javascript">
+$(function () {
+var $isAnimatedZeroSingle = $('.buttonNorm .is-animated'),
+    $isAnimatedFirst = $('.first .is-animated'),
+    $isAnimatedFirstSingle = $('.first .is-animated__single'),
+    $isAnimatedSecond = $('.second .is-animated'),
+    $isAnimatedSecondSingle = $('.second .is-animated__single'),
+    $isAnimatedThird = $('.third .is-animated'),
+    $isAnimatedThirdSingle = $('.third .is-animated__single'),
+    $isAnimatedFourth = $('.fourth .is-animated'),
+    $isAnimatedFourthSingle = $('.fourth .is-animated__single'),
+    $isAnimatedFifth = $('.fifth .is-animated'),
+    $isAnimatedFifthSingle = $('.fifth .is-animated__single');
+$isAnimatedFirst.eq(0).addClass('animated fadeIn').css('animation-delay', '.4s');
+$isAnimatedFirst.eq(1).addClass('animated fadeInRight').css('animation-delay', '1.0s');
+$isAnimatedFirst.eq(2).addClass('animated fadeInLeft').css('animation-delay', '.6s');
+// $isAnimatedSingle.addClass('animated fadeIn').css('animation-delay', '1.0s');
+
+$isAnimatedZeroSingle.fadeTo( "slow" , 0.5, function() {
+    // Animation complete.
+  });
+});
+</script>
+  </head>
+
+  <body>
+
+    <!-- Кнопка наверх -->
+<div class="row justify-content-end m-5 fixed-bottom">
+  <a href="#main"  id="buttonUp">
+    <i class="buttonUp fas white-text fa-3x fa-angle-double-up"></i>
+  </a>
+</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+            <iframe id="player" class="embed-responsive-item" src="vids/intro.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--Основные секции страницы -->
+
+<div class="first container-fluid mt-3 mb-5">
+  <!-- Section -->
+  <section class="is-animated infomain z-depth-1" >
+
+
+    <div class="row no-gutters">
+
+      <div class="is-animated col-lg-6 order-md-2">
+        <div class="view">
+          <img class="img-fluid" src="img/fonvid.jpg" alt="Video title">
+          <div class="mask flex-center rgba-black-light">
+            <a id="play" class="btn-floating btn-danger btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="is-animated col-lg-6 mx-auto d-flex align-items-center text-white">
+        <div class="px-4 py-4 py-lg-0">
+          <h3 class="font-weight-normal mb-4">Give a Fresh Design to Your MDB</h3>
+          <p class="mb-0">Fresh fellow even the whole is work outcome them. They original on mountains, drew the
+            support time. The of to graduate. Into to is the to she at return understand every in there transmitting
+            you've he the was and in finger.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section -->
+</div>
+
+
+
+
+
+
+
+
+<!--Блоки портфолио-->
+<div class=" my-5">
+
+  <section>
+    <style>
+      .md-pills .nav-link.active {
+        color: #fff;
+        background-color: #616161;
+      }
+      button.close {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        padding-right: 1rem;
+        padding-top: .6rem;
+      }
+    </style>
+    <!-- Modal -->
+		<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body p-0">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+						<!-- Grid row -->
+						<div class="row">
+
+							<!-- Grid column -->
+							<div class="col-md-6 py-5 pl-5">
+
+								<h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
+
+								<p class="text-muted">Key letters, explain which writing we he carpeting or fame, the itch expand medical amped through constructing time. And scarfs, gain, get showed accounts decades.</p>
+
+								<ul class="list-unstyled font-small mt-5">
+									<li>
+										<p class="text-uppercase mb-2"><strong>Client</strong></p>
+										<p class="text-muted mb-4">Envato Inc.</p>
+									</li>
+
+									<li>
+										<p class="text-uppercase mb-2"><strong>Date</strong></p>
+										<p class="text-muted mb-4">June 27, 2019</p>
+									</li>
+
+									<li>
+										<p class="text-uppercase mb-2"><strong>Skills</strong></p>
+										<p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
+									</li>
+
+									<li>
+										<p class="text-uppercase mb-2"><strong>Address</strong></p>
+										<a href="https://mdbootstrap.com/docs/jquery/design-blocks/">MDBootstrap</a>
+									</li>
+								</ul>
+
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-6">
+
+								<div class="view rounded-right">
+									<img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg" alt="Sample image">
+								</div>
+
+							</div>
+							<!-- Grid column -->
+
+						</div>
+						<!-- Grid row -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+    <h6 class="font-weight-bold text-center text-white text-uppercase small mb-4">правда круто?</h6>
+    <h3 class="font-weight-bold text-center text-white pb-2">Наши проекты</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">Мы имеем обширный опыт в создании различного дизайна.</p>
+
+    <!--Навигация по портфолио-->
+    <div class="row">
+      <!--First column-->
+      <div class="col-12">
+        <!-- Nav tabs -->
+        <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active font-weight-bold text-uppercase" data-toggle="tab" href="#all" role="tab">Все</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#game" role="tab">ГеймДев</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#product" role="tab">Продакт Дизайн</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#arvr" role="tab">AR/VR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#clips" role="tab">Клипы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#animation" role="tab">3д Анимация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" data-toggle="tab" href="#stands" role="tab">Стенды</a>
+          </li>
+        </ul>
+      </div>
+      <!--First column-->
+    </div>
+    <!--First row-->
+
+    <!--Tab panels-->
+    <div class="tab-content mb-5">
+
+      <!--Panel 1-->
+      <div class="tab-pane fade show in active" id="all" role="tabpanel">
+        <div class="row d-flex justify-content-centered ">
+          <!-- Grid column 1-->
+          <div class="col-md-12 col-lg-2">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+          </div>
+          <!-- Grid column 2-->
+          <div class="col-md-6 col-lg-2">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+          </div>
+          <!-- Grid column 3 -->
+          <div class="col-md-6 col-lg-2">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+          </div>
+          <!-- Grid column 4-->
+          <div class="col-md-6 col-lg-2">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+          </div>
+          <!-- Grid column 5-->
+          <div class="col-md-6 col-lg-2">
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <!--Panel 2-->
+      <div class="tab-pane fade" id="game" role="tabpanel">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12 col-lg-4">
+            <!-- Card -->
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img9.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">Paper Bag</h5>
+                <p class="card-text text-uppercase mb-3">Bag</p>
+              </div>
+            </a>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4">
+            <!-- Card -->
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img4.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">Book</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4">
+            <!-- Card -->
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">Magazine</h5>
+                <p class="card-text text-uppercase mb-3">Book</p>
+              </div>
+            </a>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!--Panel 3-->
+      <div class="tab-pane fade" id="stands" role="tabpanel">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12 col-lg-4">
+            <!-- Card -->
+            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">Phone Bag</h5>
+                <p class="card-text text-uppercase mb-3">Bag, Box</p>
+              </div>
+            </div>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4">
+            <!-- Card -->
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img5.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">Notes</h5>
+                <p class="card-text text-uppercase mb-3">Note</p>
+              </div>
+            </a>
+            <!-- Card -->
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4">
+            <!-- Card -->
+            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+              <!-- Card image -->
+              <img class="card-img-top" src=" https://mdbootstrap.com/img/Photos/Others/img10.jpg" alt="Card image cap">
+              <!-- Card content -->
+              <div class="card-body">
+                <h5 class="my-3">T-shirt</h5>
+                <p class="card-text text-uppercase mb-3">Box</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+      <!-- Футер -->
+      <footer id="footer2" class="page-footer font-small py-4">
+        <!-- Footer Elements -->
+        <div class="container">
+          <div class="row d-flex justify-content-between px-4">
+            <div>
+              <!-- Copyright -->
+              <div class="footer-copyright text-center bg-transparent">© 2020 Copyright:
+                <a href="">пацанывообщеребяты.ком</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex mb-0">
+                <li>
+                	<a class="mr-3" role="button"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                	<a class="mr-3" role="button"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                	<a class="mr-3" role="button"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                	<a class="" role="button"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+
+
+
+      <!-- Кнопка домой -->
+  <a class="buttonNorm is-animated"  href="index.html#contacts">
+    <svg  viewBox="45 60 400 320" xmlns="http://www.w3.org/2000/svg">
+        <path fill="rgb(181, 0, 255)" d="M 90 210 C 90 180 90 150 90 150 C 150 150 180 150 180 150 C 180 150 300 150 300 150 C 300 150 330 150 390 150 C 390 150 390 180 390 210 C 390 240 390 270 390 270 C 330 270 300 270 300 270 C 300 270 180 270 180 270 C 180 270 150 270 90 270 C 90 270 90 240 90 210" mask="url(#knockout-text)" >
+        </path>
+        <mask id="knockout-text">
+          <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
+          <text x="147" y="227" fill="#000">НОРМАЛЬНО</text>
+        </mask>
+    </svg>
+    </a>
+  </body>
+</html>
