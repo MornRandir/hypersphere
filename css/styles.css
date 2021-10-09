@@ -821,7 +821,7 @@ max-width: 500px;
 }
 .md-pills .nav-link.active {
   color: #fff;
-  background-color: rgb(17, 0, 38);
+  background-color: #F50537;
 }
 .xbutton {
   background-color: transparent;
@@ -836,7 +836,7 @@ max-width: 500px;
   box-shadow:none;
 }
 .xbutton:hover {
-  color: rgb(105, 0, 255);
+  color: white;
 }
 .xbutton:active {
 outline:none;
@@ -845,14 +845,11 @@ outline:none;
 outline:none;
 }
 .modalinfo{
-  background: #290067;
-  background: -webkit-linear-gradient(#4f0090, #290083);
-  background:    -moz-linear-gradient(#4f0090, #290083);
-  background:         linear-gradient(#4f0090, #290083);
-    color: white;
+  background: white;
+    color: black;
 }
 .modalarrow{
-  color:rgb(181, 0, 255);
+  color:#F50537;
 }
 body.modal-open #fullpage{
   -webkit-filter: blur(3px);
