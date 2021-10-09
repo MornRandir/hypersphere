@@ -52,7 +52,10 @@ html{
 
 
 body {
-   background-color:rgb(17, 0, 38);
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 }
 
 body a{
@@ -63,15 +66,17 @@ body a:hover{
   text-decoration: none;
   color: white;
 }
-.logoNormal{
-font-family: 'Trappist';
-}
-.logoNormal a{
-  text-decoration: none;
-  color: white;
-}
+
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+
 .navbar{
-  background: rgb(17, 0, 38);
+  background:	#f50537;
+
 }
 .menuBG{
   background-color: rgba(17, 0, 38, .6)!important;
@@ -91,8 +96,38 @@ font-family: 'Trappist';
 }
 
 
+.audi-logo{
+background-color: #F50537;
+background-image: url(../img/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg);
+width: 100px;
+height: auto;
+}
+
+.instagram-s{
+  justify-content: center;
+display: inline;
+background-image: url(../img/icons/instagram-small.svg);
+width: 80px;
+height: auto;
+}
+
+.blank_1{
+  src: url(../img/slides/blank_1.png);
+  width:100%;
+  height:100%;
+}
 
 
+.color-progressive-text{
+color: #F50537;
+}
+
+.color-progressive-bg{
+background-color: #F50537;
+}
+.color-audi-grey{
+color:  #b3b3b3;
+}
 /* Glitch Logo*/
 /* Our mixin positions a copy of our text
 directly on our existing text, while
@@ -357,21 +392,23 @@ skew to change the 'thickness' of the glitch.*/
 
 } */
 #menu li.active{
-	background: rgb(181, 0, 255);
-	color: #fff;
+
+	background: white;
 }
 #menu li:hover{
-  background: rgb(105, 0, 255);
+  border: 1px solid white;
+
 }
 #menu li a{
 	text-decoration:none;
 	color: white;
 }
 #menu li a:hover{
+  background: #F50537;
   color: #fff;
 }
 #menu li.active a:hover{
-	color: #fff;
+  color: white;
 }
 #menu li a,
 #menu li.active a{
@@ -379,7 +416,7 @@ skew to change the 'thickness' of the glitch.*/
 	display:block;
 }
 #menu li.active a{
-	color: #fff;
+  color: #F50537;
 }
 #menu{
 	/* position:fixed;
@@ -473,6 +510,7 @@ animation-duration: 3s;
 animation-iteration-count: infinite;
 animation-name: buttonUp;
 animation-timing-function: ease;
+background-color: #f50537;
 }
 
 @keyframes buttonUp {
@@ -528,8 +566,8 @@ video::-webkit-media-controls {
     display: block;
     width: 30px;
     height: 30px;
-    border-bottom: 5px solid rgb(181, 0, 255);
-    border-right: 5px solid rgb(181, 0, 255);
+    border-bottom: 5px solid #F50537;
+    border-right: 5px solid #F50537;
     transform: rotate(45deg);
     margin: auto;
     animation: animate 2s infinite;
@@ -563,7 +601,7 @@ video::-webkit-media-controls {
   box-shadow: none !important;
   position: relative;
   padding: 10px 30px;
-  border: 2px solid rgb(105, 0, 255);
+  border: 2px solid #F50537;
   color: white;
   background: rgba(0, 0, 0, 0.42);
   text-decoration: none;
@@ -575,9 +613,9 @@ video::-webkit-media-controls {
 
 }
 .btn-cont .btn:hover {
-  border:2px solid rgb(105, 0, 255);
+  border:2px solid #F50537;
   border-radius: 0px;
-  background-color: rgb(105, 0, 255);
+  background-color: #F50537;
 }
 .btn-cont .btn:hover .line-1 {
   -webkit-animation: move1 1500ms infinite ease;
@@ -777,6 +815,10 @@ video::-webkit-media-controls {
 }
 
 /* Стили для Modals */
+.modal_design{
+  background-color: #F50537;
+max-width: 500px;
+}
 .md-pills .nav-link.active {
   color: #fff;
   background-color: rgb(17, 0, 38);
@@ -789,7 +831,7 @@ video::-webkit-media-controls {
   padding-right: 1rem;
   padding-top: .6rem;
   text-decoration: none!important;
-  color: rgb(181, 0, 255);
+  color: #F50537;
   border-style: none!important;
   box-shadow:none;
 }
@@ -843,42 +885,48 @@ body.modal-open #fullpage{
 }
 
 #section1{
-  background: #290067;
-  background: -webkit-linear-gradient(#43006b, #5c0041);
-  background:    -moz-linear-gradient(#43006b, #5c0041);
-  background:         linear-gradient(#43006b, #5c0041);
-
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 }
 #section2{
-  background: #290067;
-  background: -webkit-linear-gradient(#5c0041, #290067);
-  background:    -moz-linear-gradient(#5c0041, #290067);
-  background:         linear-gradient(#5c0041, #290067);
-
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 }
 #section3{
-  background: #290067;
-  background: -webkit-linear-gradient(#290067, #9e006a);
-  background:    -moz-linear-gradient(#290067, #9e006a);
-  background:         linear-gradient(#290067, #9e006a);
-
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 }
 #section4{
-  background: #290067;
-  background: -webkit-linear-gradient(##9e006a, #4f0090);
-  background:    -moz-linear-gradient(#9e006a, #4f0090);
-  background:         linear-gradient(#9e006a, #4f0090);
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 
 }
 #section5{
-  background: #290067;
-  background: -webkit-linear-gradient(#4f0090, #290083);
-  background:    -moz-linear-gradient(#4f0090, #290083));
-  background:         linear-gradient(#4f0090, #290083));
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 
 }
+
+
 #section6{
-  background: rgb(17, 0, 38);
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
+}
+
+#section7{
+  background: #F50537;
   }
 
 
@@ -909,8 +957,9 @@ body.modal-open #fullpage{
 }
 
 #forbidden{
-  background: #290067;
-  background: -webkit-linear-gradient(#4f0090, #290083);
-  background:    -moz-linear-gradient(#4f0090, #290083));
-  background:         linear-gradient(#4f0090, #290083));
+
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to left, #FFFFFF, #999999);
+  background:    -moz-linear-gradient(to left, #FFFFFF, #999999);
+  background:         linear-gradient(to left, #FFFFFF, #999999);
 }

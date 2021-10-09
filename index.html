@@ -11,29 +11,23 @@
   <title>HYPERSPHERE</title>
 <!--favicon-->
 
-<link color="rgb(105, 0, 255)" rel="mask-icon" href="img/favicon/safari_pinned_tab.svg">
 
-<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-<link rel="manifest" href="js/manifest.json">
-<meta name="msapplication-TileColor" content="rgb(105, 0, 255)">
-<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="rgb(105, 0, 255)">
-<meta name="application-name" content="NORMAL|СТУДИЯ">
-<meta name="msapplication-config" content="xml/browserconfig.xml">
+<link rel="manifest" href="img/favicon/site.webmanifest">
+<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#f50537">
+<meta name="msapplication-TileColor" content="#f50537">
+<meta name="theme-color" content="#ffffff">
 
 
+
+
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
   <!-- Стили анимаций -->
@@ -111,31 +105,132 @@
     }, 2000);
   </script>
 
-<!--Удаление якорей из url-->
-<script type="text/javascript">
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
 
-</script>
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: '0McQmw0h5mQ',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 6000);
+        done = true;
+      }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
 </head>
+
 
 <body>
 
 
 
-  font-family: "AudiTypeVar", Verdana, sans-serif;
-  font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
-  -webkit-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
-  -moz-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
-  -ms-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
-  -o-font-feature-settings: "kern" 1 ,"liga" 1, "calt" 1, "locl" 1;
 
 
 
-  <!-- Меню-->
-  <nav class="navbar  fixed-top navbar-expand-md navbar-dark lighten-4 mb-4 scrolling-navbar">
+
+
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top  scrolling-navbar">
+
+    <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon1"><span></span><span></span><span></span></div>
+    </button>
+
+      <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap" id="navbarSupportedContent20">
+
+        <div class="container-fluid justify-content-between">
+          <!-- Left elements -->
+          <div class="d-flex">
+            <!-- Brand -->
+            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#main">
+              <img
+                src="./img/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg"
+                height="20"
+                alt=""
+                loading="lazy"
+                style="margin-top: 2px;"
+              />
+            </a>
+          </div>
+
+          <!-- Center elements -->
+          <ul id="menu" class="navbar-nav flex-row d-none d-md-flex">
+            <li class="nav-item me-lg-1" data-menuanchor="main"><a class="nav-link" href="#main">Main</a></li>
+            <li class="nav-item mx-2" data-menuanchor="about"><a class="nav-link" href="#about">Idea</a></li>
+            <li class="nav-item mx-2" data-menuanchor="team"><a class="nav-link" href="#team">Philosophy</a></li>
+            <li class="nav-item mx-2" data-menuanchor="customer"><a class="nav-link" href="#customer">Competitors</a></li>
+            <li class="nav-item mx-2" data-menuanchor="contacts"><a class="nav-link" href="#contacts">Sketch</a></li>
+            <li class="nav-item mx-2" data-menuanchor="portfolio"><a class="nav-link" href="doing.html">Final</a></li>
+            <li class="nav-item mx-2" data-menuanchor="info"><a class="nav-link" href="#info">Info</a></li>
+          </ul>
+
+
+          <!-- Right elements -->
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item me-3 me-lg-1">
+              <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                <strong class="d-none d-sm-block ms-1">Ru</strong>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-1">
+              <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                <strong class="d-none d-sm-block ms-1">Eng</strong>
+              </a>
+            </li>
+          </ul>
+          <!-- Right elements -->
+        </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Меню
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark lighten-4 mb-4 scrolling-navbar">
 
     <a class="navbar-brand" href="#main">
-      <h3 class="logoNormal my-auto d-md-none">NRML</h3>
+      <div class="audi-logo">
+      </div>
     </a>
+
 
     <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
       <div class="animated-icon1"><span></span><span></span><span></span></div>
@@ -144,47 +239,28 @@
 
 
 
-    <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap" id="navbarSupportedContent20">
-      <div class="logoNormal my-auto d-none d-md-block">
-        <a href="#main">
-          NORMAL | СТУДИЯ
-        </a>
-      </div>
+    <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap">
 
-      <ul id="menu" class="navbar-nav ">
-        <li class="nav-item" data-menuanchor="main"><a class="nav-link" href="#main">Нормости</a></li>
-        <li class="nav-item" data-menuanchor="about"><a class="nav-link" href="#about">О нормас</a></li>
-        <li class="nav-item" data-menuanchor="team"><a class="nav-link" href="#team">Команда</a></li>
-        <li class="nav-item" data-menuanchor="customer"><a class="nav-link" href="#customer">Услуги</a></li>
-        <li class="nav-item" data-menuanchor="contacts"><a class="nav-link" href="#contacts">#норм_контакт</a></li>
-        <li class="nav-item" data-menuanchor="portfolio"><a class="nav-link" href="doing.html">Портфоль</a></li>
+      <ul id="menu" class="navbar-nav">
+        <li class="nav-item mx-2" data-menuanchor="main"><a class="nav-link" href="#main">Main</a></li>
+        <li class="nav-item mx-2" data-menuanchor="about"><a class="nav-link" href="#about">Idea</a></li>
+        <li class="nav-item mx-2" data-menuanchor="team"><a class="nav-link" href="#team">Philosophy</a></li>
+        <li class="nav-item mx-2" data-menuanchor="customer"><a class="nav-link" href="#customer">Competitors</a></li>
+        <li class="nav-item mx-2" data-menuanchor="contacts"><a class="nav-link" href="#contacts">Sketch</a></li>
+        <li class="nav-item mx-2" data-menuanchor="portfolio"><a class="nav-link" href="doing.html">Final</a></li>
       </ul>
-      <div class="">
-        <ul class="list-unstyled d-flex fa-lg white-text mb-0">
-          <li>
-            <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-youtube"></i></a>
-          </li>
-        </ul>
+
       </div>
     </div>
 
   </nav>
-
+-->
 
 
   <!-- Кнопка наверх -->
   <div class="row justify-content-end m-5 fixed-bottom">
     <a href="#main" id="buttonUp">
-      <img class="buttonUp d-none d-lg-block" src="img/buttonUp.png"></i>
+      <img class="buttonUp d-none d-lg-block" src="img/icons/arrow-up-large.svg"></i>
     </a>
   </div>
 
@@ -193,15 +269,15 @@
   <div id="fullpage">
     <section class="section first" id="section0" data-anchor="main">
       <div class="overlay"></div>
-      <video id="introVideo" loop muted autoplay>
-        <source src="vids/Intro.mp4" type="video/mp4">
-      </video>
+
+ <div class="" id="player"></div>
+
       <div class="layer">
         <div class="container">
           <div class="row">
             <div class="col-md-12 is-animated__single h4-responsive">
-              <p class="logoNormal glitch text-nowrap h1-responsive" data-text="NORMAL | СТУДИЯ">NORMAL | СТУДИЯ</p>
-               Меняем будущее с помощью технологий.
+              <p>Introducing HYPERSPHERE</p>
+              <p class="color-audi-grey">Future is an attitude.</p>
             </div>
           </div>
         </div>
@@ -217,42 +293,8 @@
     </section>
 
     <section class="section second" id="section1" data-anchor="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class=" my-5 py-5">
-              <section class=" text-center text-lg-left">
-                <div class="text-center mb-5 is-animated__single">
-                <h3 class="font-weight-bold text-center mb-4">Кто мы?</h3>
-                </div>
-                <div class="row text-center justify-content-around">
-                  <div class="col-md-8 mb-4 is-animated">
-                    <h6>
-                      <p>Безграничность фантазии человека и непрерывно развивающиеся технологии. <br /><br />
-                        Это то &mdash; что у нас есть. <br>И это то &mdash; что сделает ваши решения безупречными.</p>
-                    </h6>
-                    <div class='btn-cont'>
-                      <a class='btn' href='#contacts'>
-                        Написать <i class="far fa-envelope"></i>
-                        <span class='line-1'></span>
-                        <span class='line-2'></span>
-                        <span class='line-3'></span>
-                        <span class='line-4'></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-<br><br><br>
-                <div class="row justify-content-between">
-                  <img class="is-animated pngabout d-none" src="img/about/loyalty.png" alt="loyalty">
-                  <img class="is-animated pngabout d-none" src="img/about/creativity.png" alt="creativity">
-                  <img class="is-animated pngabout d-none" src="img/about/brain.png" alt="brain">
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     </section>
 
     <section class="section third" id="section2" data-anchor="team">
@@ -363,65 +405,43 @@
     <section class="section fourth" id="section3" data-anchor="customer">
       <div class="container my-5">
           <div class="text-center px-md-5 white-text py-4 is-animated__single">
-            <h4 class="font-weight-bold mb-4">Чем мы занимаемся?</h4>
-            <h6 class="text-center">Нашими основными направлениями являются: разработка дизайна продуктов и транспорта, геймдизайн, AR/VR, создание приложений, реалистичная визуализация, анимации и видео.</h6>
-          </br class="d-md-none">
-            <h6 class="text-center d-md-none">Вы можете ознакомиться с нашими проектами. с:</h6>
+            <h4 class="font-weight-bold mb-4">Looking to the past</h4>
           </br>
-            <div class="row d-flex justify-content-center">
-              <div class='btn-cont mx-5'>
-                <a class='btn' href='doing.html'>
-                  Проекты <i class="fas fa-briefcase"></i>
-                  <span class='line-1'></span>
-                  <span class='line-2'></span>
-                  <span class='line-3'></span>
-                  <span class='line-4'></span>
-                </a>
-              </div>
-            </div>
           </div>
           <div class="tab-content mb-5">
             <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-              <div class="row">
-                <div class="col-md-12 col-lg-4">
-                  <a class="#bf360c deep-orange darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Dev">
-                    <img class="card-img-top" src="./img/modals/dev/dev.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                      Геймдизайн
-                    </div>
-                  </a>
-                  <a class="#1c2a48 mdb-color darken-3 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Model">
-                    <img class="card-img-top" src="./img/modals/3dgame/3dGame.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                      3D Моделлирование
+              <div class="row justify-content-between">
+                <div class="col-md-3 col-lg-3">
+
+                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Horch">
+                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_1.png" alt="Card image cap">
+                    <div class="carousel-caption card-title">
+                      <h4 class="mask rgba-stylish-strong">Horch</h4>
                     </div>
                   </a>
                 </div>
-                <div class="col-md-12 col-lg-4">
-                  <a class="#880e4f pink darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Vid">
-                    <img class="card-img-top" src="./img/modals/vid/vid.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                      Анимация и видео
+                <div class="col-md-3 col-lg-3">
+                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#AU">
+                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_2.png" alt="Card image cap">
+                    <div class="carousel-caption card-title">
+                      <h4 class="mask rgba-stylish-strong">Auto Union</h4>
                     </div>
                   </a>
-                  <a class="#64b5f6 blue lighten-2 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Product">
-                    <img class="card-img-top " src="./img/modals/prod/prod.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                      Промышленный дизайн
+
+                </div>
+                <div class="col-md-3 col-lg-3">
+                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Quattro">
+                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_3.png" alt="Card image cap">
+                    <div class="carousel-caption card-title">
+                      <h4 class="mask rgba-stylish-strong">Quattro</h4>
                     </div>
                   </a>
                 </div>
-                <div class="col-md-12 col-lg-4">
-                  <a class="#4a148c purple darken-4 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Graf">
-                    <img class="card-img-top" src="./img/modals/graf/graf.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                    Графический дизайн
-                    </div>
-                  </a>
-                  <a class="#59698d mdb-color lighten-1 card hoverable mb-4 is-animated" data-toggle="modal" data-target="#Stand">
-                    <img class="card-img-top" src="./img/modals/stand/stand.jpg" alt="Card image cap">
-                    <div class="card-body text-nowrap">
-                      Выставочные стенды
+                <div class="col-md-3 col-lg-3">
+                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#LeMans">
+                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_4.png" alt="Card image cap">
+                    <div class="carousel-caption card-title">
+                      <h4 class="mask rgba-stylish-strong">LeMans</h4>
                     </div>
                   </a>
                 </div>
@@ -433,123 +453,58 @@
 
     <section class="section fifth" id="section4" data-anchor="contacts">
       <div class="container is-animated my-5">
-        <h1>Напишите нам</h1>
+        <h1>If you have any questions write me an email :)</h1>
 
-        <div class="form__wrapper">
-          <!-- Форма обратной связи -->
-          <form id="feedback-form" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
-            <!-- Имя пользователя -->
-            <div class="form-group">
-              <label for="name" class="control-label">Как к вам обращаться?</label>
-              <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
-                maxlength="30" required="required">
-              <div class="invalid-feedback"></div>
-            </div>
-            <div class="form-row">
-              <!-- Телефон пользователя -->
-              <div class="form-group">
-                <label for="phone" class="control-label">Телефон</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">+7</div>
-                  </div>
-                  <input id="phone" type="tel" name="phone" class="form-control" value="(___)___-__-__" pattern="^\(?[0-9]{3}\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$">
-                  <div class="invalid-feedback"></div>
-                </div>
-              </div>
-              <!-- Email пользователя -->
-              <div class="form-group">
-                <label for="email" class="control-label">Email-адрес</label>
-                <input id="email" type="email" name="email" required="required" class="form-control" value=""
-                  placeholder="Email-адрес">
-                <div class="invalid-feedback"></div>
-              </div>
-            </div>
-
-
-            <!-- Сообщение пользователя -->
-            <div class="form-group">
-              <label for="message" class="control-label">Свяжитесь с нами, опишите ваши идеи, прикрепите ссылку на облако с проектом.</label>
-              <textarea id="message" name="message" class="form-control" rows="3"
-                placeholder="Сообщение (не менее 20 символов)." minlength="20" maxlength="500"
-                required="required"></textarea>
-              <div class="invalid-feedback"></div>
-            </div>
-
-
-
-
-
-            <!-- Пользовательское солашение -->
-            <div class="form-group form-agreement">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
-                <label class="custom-control-label" for="customCheck">Нажимая кнопку, я принимаю условия <a
-                    href="#">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных.</label>
-              </div>
-            </div>
-
-            <!-- Сообщение при ошибке -->
-            <div class="form-error d-none">
-              Исправьте данные и отправьте форму ещё раз.
-            </div>
-
-            <!-- Индикация отправки данных формы на сервер -->
-            <div class="progress d-none">
-              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                style="width: 0"></div>
-            </div>
-
-            <!-- Кнопка для отправки формы на сервер -->
-            <div class="form-submit">
-              <button type="submit" disabled>Отправить сообщение</button>
-            </div>
-
-          </form>
-
-          <!-- Сообщение об успешной отправки формы -->
-          <div class="form-result-success d-none">
-            <div>Форма успешно отправлена. Нажмите на <a href="#" data-target="#feedback-form">ссылку</a>, чтобы отправить
-              ещё одно сообщение.</div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!--Маска формы телефона-->
-      <script src="js/masked_input_1.4.1.js" type="text/javascript"></script>
-      <script>
-        // masked_input_1.4.1-min.js
-        // angelwatt.com/coding/masked_input.php
-        MaskedInput({
-          elm: document.getElementById('phone'), // select by id
-          format: '(___)___-__-__',
-          separator: '()-'
-        });
-      </script>
-      <script src="/feedback/js/process-forms.js"></script>
-      <script>
-          (new ProcessForm()).init();
-        /*
-        Параметры указываются в виде:
-        {
-        ключ: значение;
-        ключ: значение;
-        ...
-        }
-        Основные параметры
-        selector - селектор формы (по умолчанию '#feedback-form')
-        attachmentsMaxFileSize - максимальный размер файла в Кбайтах (по умолчанию 512)
-        attachmentsFileExt - допустимые расширения файлов для загрузки (по умолчанию 'jpg','jpeg','bmp','gif','png')
-        isUseDefaultSuccessMessage - отображать дефолтное сообщение после отправки
-        */
-
-      </script>
     </section>
 
 
-<section class="section sixth fp-auto-height" id="section6" data-anchor="footer">
+
+
+
+<section class="section sixth" id="section6" data-anchor="info">
+  <div class="row d-flex justify-content-center">
+    <div class='btn-cont mx-5'>
+      <a class='btn' href='doing.html'>
+        UE4 Build <img src="./img/icons/download-small.svg"/>
+        <span class='line-1'></span>
+        <span class='line-2'></span>
+        <span class='line-3'></span>
+        <span class='line-4'></span>
+      </a>
+    </div>
+    <div class='btn-cont mx-5'>
+      <a class='btn' href='https://www.24h-lemans.com/en/lemans/regulation'>
+        GitHub Repo <img src="./img/icons/download-small.svg"/>
+        <span class='line-1'></span>
+        <span class='line-2'></span>
+        <span class='line-3'></span>
+        <span class='line-4'></span>
+      </a>
+    </div>
+  </div>
+    <div class='btn-cont mx-5'>
+      <a class='btn' href='doing.html'>
+        Сover letter <img src="./img/icons/download-small.svg"/>
+        <span class='line-1'></span>
+        <span class='line-2'></span>
+        <span class='line-3'></span>
+        <span class='line-4'></span>
+      </a>
+    </div>
+
+    <div class='btn-cont mx-5'>
+      <a class='btn' href='https://www.24h-lemans.com/en/lemans/regulation'>
+        WEC Regulations <img src="./img/icons/download-small.svg"/>
+        <span class='line-1'></span>
+        <span class='line-2'></span>
+        <span class='line-3'></span>
+        <span class='line-4'></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section seventh fp-auto-height" id="section7" data-anchor="footer">
   <footer class="page-footer font-small py-4">
     <div class="container">
       <div class="d-flex">
@@ -560,7 +515,7 @@
               <i class="far fa-smile-beam fa-spin "></i>2021 Copyright:
               </div>
               <div class="col-md-6">
-                  <a href="http://www.nrml.tech">www.nrml.tech</a>
+                  <a href="http://www.hypersphere.fun">www.hypersphere.fun</a>
               </div>
             </div>
           </div>
@@ -568,16 +523,16 @@
         <div class="col-md-6 d-flex justify-content-end">
           <ul class="list-unstyled d-flex mb-0">
             <li>
-              <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><i class="fab fa-facebook-f"></i></a>
+              <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><div class="instagram-s"></a>
             </li>
             <li>
-              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-twitter"></i></a>
+              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
             </li>
             <li>
-              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-instagram"></i></a>
+              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
             </li>
             <li>
-              <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><i class="fab fa-youtube"></i></a>
+              <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
             </li>
           </ul>
         </div>
@@ -585,11 +540,10 @@
     </div>
   </footer>
 </section>
-
 </div>
 
   <!-- Modals для услуг НЕ БУДЕТ РАБОТАТЬ ЕСЛИ ПОМЕСТИТЬ В fullpage -->
-  <div class="modal fade" id="Dev" tabindex="-1" role="dialog" aria-labelledby="Dev" aria-hidden="true">
+  <div class="modal fade" id="Horch" tabindex="-1" role="dialog" aria-labelledby="Horch" aria-hidden="true">
     <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body p-0">
@@ -640,7 +594,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Model" tabindex="-1" role="dialog" aria-labelledby="Model" aria-hidden="true">
+  <div class="modal fade" id="AU" tabindex="-1" role="dialog" aria-labelledby="AU" aria-hidden="true">
     <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body p-0">
@@ -695,7 +649,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Product" tabindex="-1" role="dialog" aria-labelledby="Product" aria-hidden="true">
+  <div class="modal fade" id="Quattro" tabindex="-1" role="dialog" aria-labelledby="Quattro" aria-hidden="true">
     <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body p-0">
@@ -747,7 +701,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Vid" tabindex="-1" role="dialog" aria-labelledby="Vid" aria-hidden="true">
+  <div class="modal fade" id="LeMans" tabindex="-1" role="dialog" aria-labelledby="LeMans" aria-hidden="true">
     <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body p-0">
@@ -799,110 +753,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Graf" tabindex="-1" role="dialog" aria-labelledby="Graf" aria-hidden="true">
-    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="modalinfo row">
-            <div class="col-md-6 py-5 pl-5">
-              <h5 class="font-weight-bold mb-3">Графический дизайн</h5>
-              <p>Современные решения коммуникативного дизайна для ваших проектов.
-                <br>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Яркий дизайн</p>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Макеты в любом формате</p>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Индивидуальный подход</p>
-            </div>
-            <div class="col-md-6">
-              <div id="carousel-graf" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-graf" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-graf" data-slide-to="1"></li>
-                  <li data-target="#carousel-graf" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/modals/graf/1.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/modals/graf/2.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/modals/graf/3.jpg" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carousel-graf" role="button" data-slide="prev">
-                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-graf" role="button" data-slide="next">
-                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="Stand" tabindex="-1" role="dialog" aria-labelledby="Stand" aria-hidden="true">
-    <div class="modal-dialog modal-fluid  modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="modalinfo row">
-            <div class="col-md-6 py-5 pl-5">
-              <h5 class="font-weight-bold mb-3">Выставочные стенды</h5>
-              <p>Наши специалисты создают успешные проекты под выставки разного масштаба. Качественная презентация вашего бренда. Понимание технологий производства.
-                <br>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Быстрые решения</p>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Понимание технологий производства</p>
-                <br>
-                <p><i class="fas fa-dot-circle green-text"></i> Качественная визуализация</p>
-            </div>
-            <div class="col-md-6">
-              <div id="carousel-stand" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-stand" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-stand" data-slide-to="1"></li>
-                  <li data-target="#carousel-stand" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/modals/stand/1.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/modals/stand/2.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/modals/stand/3.jpg" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carousel-stand" role="button" data-slide="prev">
-                  <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-stand" role="button" data-slide="next">
-                  <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
-        </button>
-      </div>
-    </div>
-  </div>
+
 
 
 
@@ -934,7 +785,7 @@
         autoScrolling: true,
         scrollHorizontally: false,
         licenseKey: '8C06A6A2-33CB47EF-86BCD8DB-2CDB1201',
-        anchors: ['main', 'about', 'team', 'customer', 'contacts', 'footer'],
+        anchors: ['main', 'about', 'team', 'customer', 'contacts', 'info', 'footer',],
         navigation: false,
         navigationTooltips: ['Нормости', 'Кто Я?', 'Крутые', 'Я могу', 'Напиши'],
         showActiveTooltip: true,
