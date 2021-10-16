@@ -9,25 +9,25 @@
   <meta name="author" content="">
 
   <title>HYPERSPHERE</title>
-<!--favicon-->
+  <!--favicon-->
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-<link rel="manifest" href="img/favicon/site.webmanifest">
-<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#f50537">
-<meta name="msapplication-TileColor" content="#f50537">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#f50537">
+  <meta name="msapplication-TileColor" content="#f50537">
+  <meta name="theme-color" content="#ffffff">
 
 
 
 
 
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
   <!-- Стили анимаций -->
@@ -68,8 +68,8 @@
         if (elem.hasClass('show')) {
           elem.toggleClass('show');
           $('.animated-icon1').toggleClass('open');
-                  $('.navbar').toggleClass('menuBG');
-                  $('.section').toggleClass('secOverlay');
+          $('.navbar').toggleClass('menuBG');
+          $('.section').toggleClass('secOverlay');
         }
       });
     });
@@ -90,6 +90,7 @@
     TO MAKE IT INTERACTIVE
   */
     upInteractive = false;
+
     function autoToggle() {
       $('.arrow').toggleClass('auto');
     }
@@ -116,6 +117,7 @@
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     var player;
+
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
         videoId: '0McQmw0h5mQ',
@@ -135,12 +137,14 @@
     //    The function indicates that when playing a video (state=1),
     //    the player should play for six seconds and then stop.
     var done = false;
+
     function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING && !done) {
         setTimeout(stopVideo, 6000);
         done = true;
       }
     }
+
     function stopVideo() {
       player.stopVideo();
     }
@@ -164,55 +168,47 @@
       <div class="animated-icon1"><span></span><span></span><span></span></div>
     </button>
 
-      <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap" id="navbarSupportedContent20">
+    <div class="collapse navbar-collapse w-100 justify-content-between text-nowrap" id="navbarSupportedContent20">
 
-        <div class="container-fluid justify-content-between">
-          <!-- Left elements -->
-          <div class="d-flex">
-            <!-- Brand -->
-            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#main">
-              <img
-                src="./img/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg"
-                height="20"
-                alt=""
-                loading="lazy"
-                style="margin-top: 2px;"
-              />
-            </a>
-          </div>
-
-          <!-- Center elements -->
-          <ul id="menu" class="navbar-nav flex-row d-none d-md-flex">
-            <li class="nav-item mx-2" data-menuanchor="about"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item mx-2" data-menuanchor="conception"><a class="nav-link" href="#conception">Conception</a></li>
-            <li class="nav-item mx-2" data-menuanchor="history"><a class="nav-link" href="#history">History</a></li>
-            <li class="nav-item mx-2" data-menuanchor="philosophy"><a class="nav-link" href="#philosophy">Philosophy</a></li>
-            <li class="nav-item mx-2" data-menuanchor="research"><a class="nav-link" href="#research">Research</a></li>
-            <li class="nav-item mx-2" data-menuanchor="Result"><a class="nav-link" href="#result">Result</a></li>
-            <li class="nav-item mx-2" data-menuanchor="info"><a class="nav-link" href="#info">Info</a></li>
-          </ul>
-
-
-          <!-- Right elements -->
-          <ul class="navbar-nav flex-row">
-            <li class="nav-item me-3 me-lg-1">
-              <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-                <strong class="d-none d-sm-block ms-1">Ru</strong>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-1">
-              <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-                <strong class="d-none d-sm-block ms-1">Eng</strong>
-              </a>
-            </li>
-          </ul>
-          <!-- Right elements -->
+      <div class="container-fluid justify-content-between">
+        <!-- Left elements -->
+        <div class="d-flex">
+          <!-- Brand -->
+          <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#main">
+            <img src="./img/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg" height="20" alt="" loading="lazy" style="margin-top: 2px;" />
+          </a>
         </div>
+
+        <!-- Center elements -->
+        <ul id="menu" class="navbar-nav flex-row d-none d-md-flex">
+          <li class="nav-item mx-2" data-menuanchor="about"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item mx-2" data-menuanchor="conception"><a class="nav-link" href="#conception">Conception</a></li>
+          <li class="nav-item mx-2" data-menuanchor="history"><a class="nav-link" href="#history">History</a></li>
+          <li class="nav-item mx-2" data-menuanchor="philosophy"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+          <li class="nav-item mx-2" data-menuanchor="research"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item mx-2" data-menuanchor="Result"><a class="nav-link" href="#result">Result</a></li>
+          <li class="nav-item mx-2" data-menuanchor="info"><a class="nav-link" href="#info">Info</a></li>
+        </ul>
+
+
+        <!-- Right elements -->
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+              <strong class="d-none d-sm-block ms-1">Ru</strong>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+              <strong class="d-none d-sm-block ms-1">Eng</strong>
+            </a>
+          </li>
+        </ul>
+        <!-- Right elements -->
+      </div>
     </div>
   </nav>
   <!-- Navbar -->
-
-
 
 
 
@@ -270,7 +266,7 @@
     <section class="section first" id="section0" data-anchor="about">
       <div class="overlay"></div>
 
- <div class="" id="player"></div>
+      <div class="" id="player"></div>
 
       <div class="layer">
         <div class="container">
@@ -293,63 +289,126 @@
     </section>
 
     <section class="section second" id="section1" data-anchor="conception">
+      <div class="">
+        <div class="row p-0 m-0">
 
+            <img class=" position-relative" src="./img/slides/blank_2.svg" alt="">
+            <img class="position-absolute " src="./img/slides/blank_1.svg" alt="">
 
+        </div>
+      </div>
     </section>
 
     <section class="section third" id="section2" data-anchor="history">
       <div class="container my-5">
-          <div class="text-center px-md-5 white-text py-4 is-animated__single">
-            <h4 class="font-weight-bold mb-4">Looking to the past</h4>
-            History always give us some expirience and new knowledge. And history of Audi has a lot of interesting moments which have changed our life a lot.
-            This brand makes new inventions and looks in the future every day. This is not the end point, this is a lifestyle.
+        <div class="text-center px-md-5 white-text py-4 is-animated__single">
+          <h4 class="font-weight-bold mb-4">Looking to the past</h4>
+          History always give us some expirience and new knowledge. And history of Audi has a lot of interesting moments which have changed our life a lot.
+          This brand makes new inventions and looks in the future every day. This is not the end point, this is a lifestyle.
           </br>
-          </div>
-          <div class="tab-content mb-5">
-            <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-              <div class="row justify-content-between">
-                <div class="col-md-3 col-lg-3">
+        </div>
+        <div class="tab-content mb-5">
+          <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+            <div class="row justify-content-between">
+              <div class="col-md-3 col-lg-3">
 
-                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Horch">
-                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_1.png" alt="Card image cap">
-                    <div class="carousel-caption card-title">
-                      <h4 class="mask rgba-stylish-strong">Horch</h4>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#AU">
-                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_2.png" alt="Card image cap">
-                    <div class="carousel-caption card-title">
-                      <h4 class="mask rgba-stylish-strong">Auto Union</h4>
-                    </div>
-                  </a>
+                <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Horch">
+                  <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_1.png" alt="Card image cap">
+                  <div class="carousel-caption card-title">
+                    <h4 class="mask rgba-stylish-strong"><!--Horch --></h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#AU">
+                  <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_2.png" alt="Card image cap">
+                  <div class="carousel-caption card-title">
+                    <h4 class="mask rgba-stylish-strong"><!--Auto Union --></h4>
+                  </div>
+                </a>
 
-                </div>
-                <div class="col-md-3 col-lg-3">
-                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Quattro">
-                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_3.png" alt="Card image cap">
-                    <div class="carousel-caption card-title">
-                      <h4 class="mask rgba-stylish-strong">Quattro</h4>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                  <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#LeMans">
-                    <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_4.png" alt="Card image cap">
-                    <div class="carousel-caption card-title">
-                      <h4 class="mask rgba-stylish-strong">LeMans</h4>
-                    </div>
-                  </a>
-                </div>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#Quattro">
+                  <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_3.png" alt="Card image cap">
+                  <div class="carousel-caption card-title">
+                    <h4 class="mask rgba-stylish-strong"><!--Quattro --></h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 col-lg-3">
+                <a class="modal_design card hoverable mb-4 is-animated rounded-circle" data-toggle="modal" data-target="#LeMans">
+                  <img class="rounded-circle img-fluid card-img-top p-3" src="./img/slides/history/history_4.png" alt="Card image cap">
+                  <div class="carousel-caption card-title">
+                    <h4 class="mask rgba-stylish-strong"><!--LeMans --></h4>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
 
     <section class="section fourth" id="section3" data-anchor="philosophy">
-
+      <div class="container">
+        <div class="color-audi-grey shadow-lg row modal-dialog-centered">
+          <div class="col-md-4 col-lg-6 py-5 pl-5">
+            <div class="color-progressive-bg">
+              <h5 class="font-weight-bold mb-3 ">New brand philosophy</h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+              commodi consequatur.
+              Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br><br>
+            <p><i class="fas fa-dot-circle green-text"></i> Lorem</p>
+            <br>
+            <p><i class="fas fa-dot-circle green-text"></i> Lorem</p>
+            <br>
+            <p><i class="fas fa-dot-circle green-text"></i> Lorem</p>
+          </div>
+          <div class="col-md-4 col-lg-6">
+            <div id="carousel-dev" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-dev" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-dev" data-slide-to="1"></li>
+                <li data-target="#carousel-dev" data-slide-to="2"></li>
+                <li data-target="#carousel-dev" data-slide-to="3"></li>
+                <li data-target="#carousel-dev" data-slide-to="4"></li>
+                <li data-target="#carousel-dev" data-slide-to="5"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 img-fluid" src="./img/slides/skysphere/skysphere_1.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./img/slides/skysphere/skysphere_2.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./img/slides/skysphere/skysphere_3.png" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./img/slides/skysphere/skysphere_4.png" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./img/slides/skysphere/skysphere_5.png" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./img/slides/skysphere/skysphere_6.png" alt="Sixth slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousel-dev" role="button" data-slide="prev">
+                <i class="fas fa-chevron-left fa-2x modalarrow" aria-hidden="true"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-dev" role="button" data-slide="next">
+                <i class="fas fa-chevron-right fa-2x modalarrow" aria-hidden="true"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section fifth" id="section4" data-anchor="research">
@@ -361,100 +420,110 @@
 
 
 
-<section class="section sixth" id="section6" data-anchor="result">
+    <section class="section sixth" id="section6" data-anchor="result">
 
-</section>
+    </section>
 
-<section class="section seventh" id="section7" data-anchor="info">
-  <div class="color-audi-grey shadow-lg">
+    <section class="section seventh" id="section7" data-anchor="info">
+      <div class="color-audi-grey shadow-lg">
         <div class="container my-5 ">
-        <br><br><br>  <h2>If you have any questions write me an email :)</h2>
-  serjdesign.13@gmail.com<br><br><br>
+          <br><br><br>
+          <h2>If you have any questions write me an email :)</h2>
+          serjdesign.13@gmail.com<br><br><br>
 
-<h1>Downloads:</h1><br><br><br>
-  <div class="row justify-content-around">
-                    <div class="col-md-4 col-lg-4 ">
-    <div class='btn-cont '>
-      <a class='btn' href='doing.html'>
-        UE4 Build <img src="./img/icons/download-small.svg"/>
-        <span class='line-1'></span>
-        <span class='line-2'></span>
-        <span class='line-3'></span>
-        <span class='line-4'></span>
-      </a>
-    </div>
-  <div class='btn-cont'>
-    <a class='btn' href='https://github.com/MornRandir/hypersphere_ue'>
-      GitHub Repo <img src="./img/icons/download-small.svg"/>
-      <span class='line-1'></span>
-      <span class='line-2'></span>
-      <span class='line-3'></span>
-      <span class='line-4'></span>
-    </a>
-  </div>
-</div>
-                <div class="col-md-4 col-lg-4">
-    <div class='btn-cont'>
-      <a class='btn' href='./files/CoverLetter.doc'>
-        Сover letter <img src="./img/icons/download-small.svg"/>
-        <span class='line-1'></span>
-        <span class='line-2'></span>
-        <span class='line-3'></span>
-        <span class='line-4'></span>
-      </a>
-    </div>
-
-    <div class='btn-cont'>
-      <a class='btn' href='https://www.24h-lemans.com/en/lemans/regulation'>
-        WEC Regulations <img src="./img/icons/download-small.svg"/>
-        <span class='line-1'></span>
-        <span class='line-2'></span>
-        <span class='line-3'></span>
-        <span class='line-4'></span>
-      </a>
-    </div>
-  </div>
-</div><br><br><br>
-</div></div>
-</section>
-
-<section class="section eighth fp-auto-height" id="section8" data-anchor="footer">
-  <footer class="page-footer font-small py-4">
-    <div class="container">
-      <div class="d-flex">
-        <div class="col-md-6 d-flex justify-content-start">
-          <div class="footer-copyright text-center  bg-transparent">
-            <div class="d-flex">
-              <div class="col-md-6 d-none d-md-block text-nowrap">
-              <i class="far fa-smile-beam fa-spin "></i>2021 Copyright:
+          <h1>Downloads:</h1><br><br><br>
+          <div class="row justify-content-around">
+            <div class="col-md-4 col-lg-4 ">
+              <div class='btn-cont '>
+                <a class='btn' href='doing.html'>
+                  UE4 Build <img src="./img/icons/download-small.svg" />
+                  <span class='line-1'></span>
+                  <span class='line-2'></span>
+                  <span class='line-3'></span>
+                  <span class='line-4'></span>
+                </a>
               </div>
-              <div class="col-md-6">
-                  <a href="http://www.hypersphere.fun">www.hypersphere.fun</a>
+              <div class='btn-cont'>
+                <a class='btn' href='https://github.com/MornRandir/hypersphere_ue'>
+                  GitHub Repo <img src="./img/icons/download-small.svg" />
+                  <span class='line-1'></span>
+                  <span class='line-2'></span>
+                  <span class='line-3'></span>
+                  <span class='line-4'></span>
+                </a>
               </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class='btn-cont'>
+                <a class='btn' href='./files/CoverLetter.doc'>
+                  Сover letter <img src="./img/icons/download-small.svg" />
+                  <span class='line-1'></span>
+                  <span class='line-2'></span>
+                  <span class='line-3'></span>
+                  <span class='line-4'></span>
+                </a>
+              </div>
+
+              <div class='btn-cont'>
+                <a class='btn' href='https://www.24h-lemans.com/en/lemans/regulation'>
+                  WEC Regulations <img src="./img/icons/download-small.svg" />
+                  <span class='line-1'></span>
+                  <span class='line-2'></span>
+                  <span class='line-3'></span>
+                  <span class='line-4'></span>
+                </a>
+              </div>
+            </div>
+          </div><br><br><br>
+        </div>
+      </div>
+    </section>
+
+    <section class="section eighth fp-auto-height" id="section8" data-anchor="footer">
+      <footer class="page-footer font-small py-4">
+        <div class="container">
+          <div class="d-flex">
+            <div class="col-md-6 d-flex justify-content-start">
+              <div class="footer-copyright text-center  bg-transparent">
+                <div class="d-flex">
+                  <div class="col-md-6 d-none d-md-block text-nowrap">
+                    <i class="far fa-smile-beam fa-spin "></i>2021 Copyright:
+                  </div>
+                  <div class="col-md-6">
+                    <a href="http://www.hypersphere.fun">www.hypersphere.fun</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+              <ul class="list-unstyled d-flex mb-0">
+                <li>
+                  <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/">
+                    <div class="instagram-s">
+                  </a>
+                </li>
+                <li>
+                  <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/">
+                    <div class="instagram-s">
+                  </a>
+                </li>
+                <li>
+                  <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/">
+                    <div class="instagram-s">
+                  </a>
+                </li>
+                <li>
+                  <a class="" role="button" href="https://www.instagram.com/nrmlstudio/">
+                    <div class="instagram-s">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-end">
-          <ul class="list-unstyled d-flex mb-0">
-            <li>
-              <a class="mr-3" role="button" href="https://www.facebook.com/nrmlstudio/"><div class="instagram-s"></a>
-            </li>
-            <li>
-              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
-            </li>
-            <li>
-              <a class="mr-3" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
-            </li>
-            <li>
-              <a class="" role="button" href="https://www.instagram.com/nrmlstudio/"><div class="instagram-s"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-</section>
-</div>
+      </footer>
+    </section>
+  </div>
 
   <!-- Modals для услуг НЕ БУДЕТ РАБОТАТЬ ЕСЛИ ПОМЕСТИТЬ В fullpage -->
   <div class="modal fade" id="Horch" tabindex="-1" role="dialog" aria-labelledby="Horch" aria-hidden="true">
@@ -463,8 +532,11 @@
         <div class="modal-body p-0">
           <div class="modalinfo row">
             <div class="col-md-6 py-5 pl-5">
-            <div class="color-progressive-bg w-100">  <h5 class="font-weight-bold mb-3 ">August Horch 12 October 1868 – 3 February 1951</h5></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+              <div class="color-progressive-bg w-100">
+                <h5 class="font-weight-bold mb-3 ">August Horch 12 October 1868 – 3 February 1951</h5>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                commodi consequatur.
                 Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <br><br>
               <p><i class="fas fa-dot-circle green-text"></i> Lorem</p>
@@ -502,7 +574,7 @@
               </div>
             </div>
             <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+              <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
             </button>
           </div>
         </div>
@@ -559,7 +631,7 @@
           </div>
         </div>
         <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+          <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
         </button>
       </div>
     </div>
@@ -611,7 +683,7 @@
           </div>
         </div>
         <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+          <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
         </button>
       </div>
     </div>
@@ -663,7 +735,7 @@
           </div>
         </div>
         <button type="button" class="xbutton btn-lg p-2" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
+          <span aria-hidden="true"><i class="far fa-times-circle fa-2x"></i></span>
         </button>
       </div>
     </div>
@@ -700,7 +772,7 @@
         autoScrolling: true,
         scrollHorizontally: false,
         licenseKey: '8C06A6A2-33CB47EF-86BCD8DB-2CDB1201',
-        anchors: ['about', 'conception', 'history', 'philosophy','research','Result', 'info', 'footer',],
+        anchors: ['about', 'conception', 'history', 'philosophy', 'research', 'Result', 'info', 'footer', ],
         navigation: false,
         navigationTooltips: ['Нормости', 'Кто Я?', 'Крутые', 'Я могу', 'Напиши'],
         showActiveTooltip: true,
@@ -716,44 +788,45 @@
           if (screen.width >= 768) {
 
 
-          //после покидания секции 1
-          if (origin.index == 0 && direction == 'down') {
-            $isAnimatedSecondSingle.addClass('animated fadeIn').css('animation-delay', '.2s');
-            $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '.6s');
-            $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '1s');
-            $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
-            $isAnimatedSecond.eq(3).addClass('animated fadeIn').css('animation-delay', '1.4s');
-            $('#buttonUp').show().addClass('animated fadeIn').css('animation-delay', '.6s');
+            //после покидания секции 1
+            if (origin.index == 0 && direction == 'down') {
+              $isAnimatedSecondSingle.addClass('animated fadeIn').css('animation-delay', '.2s');
+              $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '.6s');
+              $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '1s');
+              $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
+              $isAnimatedSecond.eq(3).addClass('animated fadeIn').css('animation-delay', '1.4s');
+              $('#buttonUp').show().addClass('animated fadeIn').css('animation-delay', '.6s');
 
-          } else if (destination.index == 0) {
-            $('#buttonUp').hide();
-          }
-          //после покидания секции 2
-          else if (origin.index == 1 && direction == 'down') {
-            $isAnimatedThirdSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
-            $isAnimatedThird.eq(0).addClass('animated fadeIn').css('animation-delay', '.4s');
-            $isAnimatedThird.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
-            $isAnimatedThird.eq(2).addClass('animated fadeIn').css('animation-delay', '.6s');
-            $isAnimatedThird.eq(3).addClass('animated fadeIn').css('animation-delay', '.7s');
-            $isAnimatedThird.eq(4).addClass('animated fadeIn').css('animation-delay', '.8s');
-            $isAnimatedThird.eq(5).addClass('animated fadeIn').css('animation-delay', '.9s');
-          }
+            } else if (destination.index == 0) {
+              $('#buttonUp').hide();
+            }
+            //после покидания секции 2
+            else if (origin.index == 1 && direction == 'down') {
+              $isAnimatedThirdSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
+              $isAnimatedThird.eq(0).addClass('animated fadeIn').css('animation-delay', '.4s');
+              $isAnimatedThird.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
+              $isAnimatedThird.eq(2).addClass('animated fadeIn').css('animation-delay', '.6s');
+              $isAnimatedThird.eq(3).addClass('animated fadeIn').css('animation-delay', '.7s');
+              $isAnimatedThird.eq(4).addClass('animated fadeIn').css('animation-delay', '.8s');
+              $isAnimatedThird.eq(5).addClass('animated fadeIn').css('animation-delay', '.9s');
+            }
 
-          //после покидания секции 3
-          else if (origin.index == 2 && direction == 'down') {
-            $isAnimatedFourthSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
-            $isAnimatedFourth.eq(0).addClass('animated fadeIn').css('animation-delay', '.8s');
-            $isAnimatedFourth.eq(1).addClass('animated fadeIn').css('animation-delay', '.9s');
-            $isAnimatedFourth.eq(2).addClass('animated fadeIn').css('animation-delay', '1.0s');
-            $isAnimatedFourth.eq(3).addClass('animated fadeIn').css('animation-delay', '1.1s');
-            $isAnimatedFourth.eq(4).addClass('animated fadeIn').css('animation-delay', '1.2s');
-            $isAnimatedFourth.eq(5).addClass('animated fadeIn').css('animation-delay', '1.3s');
+            //после покидания секции 3
+            else if (origin.index == 2 && direction == 'down') {
+              $isAnimatedFourthSingle.addClass('animated fadeInUp').css('animation-delay', '.2s');
+              $isAnimatedFourth.eq(0).addClass('animated fadeIn').css('animation-delay', '.8s');
+              $isAnimatedFourth.eq(1).addClass('animated fadeIn').css('animation-delay', '.9s');
+              $isAnimatedFourth.eq(2).addClass('animated fadeIn').css('animation-delay', '1.0s');
+              $isAnimatedFourth.eq(3).addClass('animated fadeIn').css('animation-delay', '1.1s');
+              $isAnimatedFourth.eq(4).addClass('animated fadeIn').css('animation-delay', '1.2s');
+              $isAnimatedFourth.eq(5).addClass('animated fadeIn').css('animation-delay', '1.3s');
+            }
+            //после покидания секции 4
+            else if (origin.index == 3 && direction == 'down') {
+              $isAnimatedFifth.addClass('animated fadeInUp');
+              $isAnimatedFifth.eq(0).css('animation-delay', '.3s');
+            }
           }
-          //после покидания секции 4
-          else if (origin.index == 3 && direction == 'down') {
-            $isAnimatedFifth.addClass('animated fadeInUp');
-            $isAnimatedFifth.eq(0).css('animation-delay', '.3s');
-          }}
         }
       });
     })(jQuery);
